@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-app
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/dubbo?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 754631
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8082/eureka/
+  instance:
+    ip-address: true
